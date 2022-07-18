@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>Info Technical Solution</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+
+    {{>slider slides=slides}}
+
+
+    <!--banner1 section-->
+    <section class="banner1_section background2 py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Start Learning New Technology here!!</h1>
+            <p>Technology has changed our day-to-day lives. Technology has brought the world closer and better connected.</p>
+            <button class="btn btn-outline-primary">Start Learning</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--services section -->
+    <section id="services-section" class="py-3">
+      <div class="container">
+        <h1 class="text-center text-secondary">Services that we provide</h1>
+        <div class="row mt-4">
+
+          {{#each services}}
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="container text-center py-3">
+                  <i class="{{this.icon}} service_icon text-secondary"></i>
+                </div>
+                <h5 class="card-title">{{this.title}}</h5>
+                <p>{{this.description}}</p>
+                <a href="{{this.link}}">{{this.linkText}}</a>
+                <a href="#!" class="ml-3">Support</a>
+              </div>
+            </div>
+          </div>
+
+          {{/each}}
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Banner2 section-->
+    <section class="banner2_section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center pt-5">
+            <h3>We work for people, not for money</h3>
+            <p>Activity in which one exerts strength or faculties to do or perform something: a : activity that a person engages in regularly to earn a livelihood people looking for work. b : a specific task, duty, function, or assignment often being a part or phase of some larger activity.</p>
+            <button class="btn btn-primary">Click here</button>
+          </div>
+          <div class="col-md-6 text-center py-2">
+            <img src="/static/images/pic3.jpg" style="height:270px;" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Banner3 section-->
+    <section class="banner2_section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center py-2">
+            <img src="/static/images/pic.jpg" style="height:270px;" alt="">
+          </div>
+          <div class="col-md-6 text-center pt-5">
+            <h3>We work for people, not for money</h3>
+            <p>Activity in which one exerts strength or faculties to do or perform something: a : activity that a person engages in regularly to earn a livelihood people looking for work. b : a specific task, duty, function, or assignment often being a part or phase of some larger activity.</p>
+            <button class="btn btn-primary">Click here</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!--Contact Us sectin -->
+
+    <section id="contact_us_section" class="py-5 background1">
+      <div class="container">
+        <h3 class="text-center text-secondary">Contact Us</h3>
+        <div class="row">
+          <div class="col-md-12">
+
+
+  <form action="/process-contact-form" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Your email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Your contact number</label>
+    <input name="phone" type="number" class="form-control" id="contactNumberField">
+  </div>
+
+  <div class="form-floating my-2">
+  <textarea name="query" style="height : 230px;" class="form-control" placeholder="Enter your query here" id="floatingTextarea"></textarea>
+  <label for="queryField">Your query</label>
+  </div>
+
+  <div class="container text-center">
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </div>
+
+</form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--About us section-->
+<section class="about_section py-5" id="about_section">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>About Us</h3>
+        <p>A website is a collection of web pages and related content that is identified by a common domain name and published on at least one web server. Examples of notable websites are Google, Facebook, Amazon, and Wikipedia. All publicly accessible websites collectively constitute the World Wide Web.</p>
+        <button class="btn btn-success">About Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Footer -->
+<footer class="footer background1 text-center py-3">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+        Copyright &copy 2022:<span>Info Technical Solution</span>
+
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
